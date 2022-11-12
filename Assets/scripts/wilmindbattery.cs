@@ -196,7 +196,7 @@ public class wilmindbattery : MonoBehaviour
     public void carupgrade()
     {if(score>=carupgradescore)
         {
-            Move.speed += 0.2f;
+            Move.speed += 0.5f;
             score -= carupgradescore;
             carupgradescore += 100;
         }
@@ -206,7 +206,7 @@ public class wilmindbattery : MonoBehaviour
     {
         if (score >=downvardcarvalue)
         {
-            Move.speed += 0.2f;
+            Move.speed += 0.4f;
             score -=downvardcarvalue ;
             carupgradescore += 100;
         }
@@ -220,16 +220,12 @@ public class wilmindbattery : MonoBehaviour
     }
     void Update()
     {
-        scoretext.text = "Your money" + score + "$";
+        scoretext.text = "Your money:" + score + "$";
         if (villagebatseconds == 1)
         {
             wilmindbatseconds = 1;
         }
-        scoretext.text = "Your money" + score + "$";
-        if (wilmindbatseconds == 1)
-        {
-            wilmindbatseconds = 1;
-        }
+        scoretext.text = "Your money:" + score + "$";
         carhealttext.text = "Car healt " + carhealt;
         if (carhealt == 0)
         {

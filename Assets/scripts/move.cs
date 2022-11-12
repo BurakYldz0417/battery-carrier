@@ -6,7 +6,7 @@ public class move : MonoBehaviour
 {
 
 
-    public float speed =0.3f;
+    public float speed =1.2f;
     
     
     void Start()
@@ -33,6 +33,11 @@ public class move : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.Rotate(Vector3.up*speed);
+        }
+
+        if(speed>=4)
+        {
+            speed = 4;
         }
     }
 
